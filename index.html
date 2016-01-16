@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="dist/stylesheets/main.css" media="screen" title="no title" charset="utf-8">
+</head>
+
+<body>
+
+  <div id="scene">
+
+    <section class="weather" id="weather-background">
+      <span class="weather__snow weather__snow--style-1"></span>
+      <span class="weather__snow weather__snow--style-2"></span>
+      <span class="weather__snow weather__snow--style-3"></span>
+      <span class="weather__snow weather__snow--style-4"></span>
+    </section>
+
+    <section class="weather" id="weather-foreground">
+
+    </section>
+
+    <section id="shops">
+      <div class="shop shop--style-1">
+        <div class="shop__chimney"></div>
+        <div class="shop__roof"></div>
+        <div class="shop__wrapper">
+          <div class="shop__attic"></div>
+          <div class="shop__first-floor">
+            <div class="shop__window shop__window--style-1">
+              <span class="shop__window-line"></span>
+            </div>
+            <div class="shop__window shop__window--style-1">
+              <span class="shop__window-line"></span>
+            </div>
+            <div class="shop__window shop__window--style-1">
+              <span class="shop__window-line"></span>
+            </div>
+          </div>
+          <div class="shop__ground-floor">
+            <div class="shop__awning">
+
+            </div>
+            <div class="shop__door"></div>
+            <div class="shop__window shop__window--style-2">
+              <span class="shop__window-line shop__window-line--vertical"></span>
+              <span class="shop__window-line shop__window-line--vertical"></span>
+              <span class="shop__window-line shop__window-line--vertical"></span>
+              <span class="shop__window-line shop__window-line--horizontal"></span>
+              <span class="shop__window-line shop__window-line--horizontal"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="shop shop--style-2">
+        <div class="shop__chimney"></div>
+        <div class="shop__chimney"></div>
+        <div class="shop__chimney"></div>
+        <div class="shop__chimney"></div>
+        <div class="shop__wrapper">
+          <div class="shop__roof"></div>
+          <div class="shop__attic"></div>
+          <div class="shop__second-floor">
+            <div class="shop__window shop__window--style-1"></div>
+            <div class="shop__window shop__window--style-1"></div>
+            <div class="shop__window shop__window--style-1"></div>
+            <div class="shop__window shop__window--style-1"></div>
+          </div>
+          <div class="shop__first-floor">
+            <div class="shop__window shop__window--style-1"></div>
+            <div class="shop__window shop__window--style-1"></div>
+            <div class="shop__window shop__window--style-1"></div>
+            <div class="shop__window shop__window--style-1"></div>
+          </div>
+          <div class="shop__ground-floor">
+            <div class="shop__banner">
+              Flying Dutchman
+            </div>
+            <div class="shop__flex-container">
+              <div class="shop__window shop__window--style-2"></div>
+              <div class="shop__window shop__window--style-2"></div>
+              <div class="shop__door"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="shop shop--style-3">
+        <div class="shop__chimney"></div>
+        <div class="shop__roof"></div>
+        <div class="shop__attic">
+          <div class="shop__window shop__window--style-2">
+
+          </div>
+        </div>
+        <div class="shop__wrapper">
+
+          <div class="shop__first-floor">
+            <div class="shop__window shop__window--style-1">
+              <span class="shop__window-line"></span>
+              <span class="shop__window-line"></span>
+            </div>
+            <div class="shop__window shop__window--style-1">
+              <span class="shop__window-line"></span>
+              <span class="shop__window-line"></span>
+            </div>
+          </div>
+
+          <div class="shop__ground-floor">
+            <div class="shop__banner">
+              <span class="shop__banner-text">Coffee House</span>
+            </div>
+            <div class="shop__awning"></div>
+            <div class="shop__flex-container">
+              <div class="shop__window shop__window--style-3"></div>
+              <div class="shop__window shop__window--style-3"></div>
+              <div class="shop__door"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="street">
+      <div class="tree tree--style-1">
+        <div class="tree__trunk"></div>
+        <div class="tree__leaves"></div>
+        <div class="tree__branch"></div>
+        <div class="tree__branch"></div>
+        <div class="tree__branch"></div>
+      </div>
+      <div class="tree tree--style-2">
+        <div class="tree__leaves-top"></div>
+        <div class="tree__leaves-middle"></div>
+        <div class="tree__leaves-bottom"></div>
+        <div class="tree__trunk"></div>
+      </div>
+      <div class="pavement"></div>
+    </section>
+  </div>
+  <script type="text/template" id="snow-animation">
+    @keyframes snow{
+      from{
+        -webkit-transform:translate(0,0);
+        transform:translate(0,0);
+      }
+      to{
+        -webkit-transform:translate(0,PLACEHOLDER);
+        transform:translate(0,PLACEHOLDER);
+      }
+    }
+
+
+    @-webkit-keyframes snow{
+      from{
+        -webkit-transform:translate(0,0);
+        transform:translate(0,0);
+      }
+      to{
+        -webkit-transform:translate(0,PLACEHOLDER);
+        transform:translate(0,PLACEHOLDER);
+      }
+    }
+  </script>
+  <script type="text/javascript" src="main.js"></script>
+</body>
+
+</html>

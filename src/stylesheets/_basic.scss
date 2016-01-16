@@ -1,0 +1,23 @@
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+
+html, body{
+  height:100%;
+}
+body{
+  margin:0;
+  background:$grey;
+  font-size: 2px;
+}
+
+
+#scene{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top:30em;
+  width: 335em;
+  margin:0 auto;
+  position: relative;
+}

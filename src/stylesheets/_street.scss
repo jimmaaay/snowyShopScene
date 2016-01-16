@@ -1,0 +1,176 @@
+#street {
+  position: relative;
+}
+.pavement {
+  width: 335em;
+  height: 9em;
+  background: #E9EAEC;
+  margin: 0 auto;
+}
+.tree--style-1 {
+  position: absolute;
+  left: 0;
+  bottom: 100%;
+  .tree__leaves {
+    border-radius: 50%;
+    background: #fff;
+    width: 50em;
+    height: 50em;
+    position: relative;
+    bottom: 15em;
+  }
+  .tree__trunk {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%,0);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 2em 57em 2em;
+    border-color: transparent transparent #621213 transparent;
+    z-index: 1;
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 1em 16em 1em;
+      border-color: transparent transparent #621213 transparent;
+      transform: translate(306%, -32%) rotate(64deg);
+      top: 6em;
+      left: 0;
+    }
+  }
+  .tree__branch:nth-of-type(3) {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 17em 3.5em;
+    border-color: transparent transparent #621213 transparent;
+    transform: translate(-262%,-10%) rotate(-64deg);
+    position: absolute;
+    left: 50%;
+    bottom: 16em;
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 1em 8em 1em;
+      border-color: transparent transparent #621213 transparent;
+      transform: translate(-289%, 29%) rotate(-64deg);
+      top: 0;
+      left: 0;
+    }
+  }
+  .tree__branch:nth-of-type(4) {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 17em 3.5em;
+    border-color: transparent transparent #621213 transparent;
+    transform: translate(146%, -37%) rotate(54deg);
+    position: absolute;
+    left: 50%;
+    bottom: 20em;
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 1em 16em 1em;
+      border-color: transparent transparent #621213 transparent;
+      transform: translate(159%, -32%) rotate(38deg);
+      top: 0;
+      left: 0;
+    }
+  }
+  .tree__branch:nth-of-type(5) {
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 17em 3.5em;
+    border-color: transparent transparent #621213 transparent;
+    transform: translate(-266%, -10%) rotate(-63deg);
+    position: absolute;
+    left: 50%;
+    bottom: 31em;
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 1em 8em 1em;
+      border-color: transparent transparent #621213 transparent;
+      transform: translate(107%, 45%) rotate(62deg);
+      top: 0;
+      left: 0;
+    }
+  }
+}
+.tree--style-2 {
+  position: absolute;
+  right: 11em;
+  bottom: 100%;
+  .tree__leaves-top {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 11em 27em 11em;
+    border-color: transparent transparent #fff transparent;
+    position: absolute;
+    bottom: 36em;
+    left: 50%;
+    transform: translate(-50%,0);
+  }
+  .tree__leaves-middle {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 15em 33em 15em;
+    border-color: transparent transparent #fff transparent;
+    position: absolute;
+    bottom: 20em;
+    left: 50%;
+    transform: translate(-50%,0);
+  }
+  .tree__leaves-bottom {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 22em 40em 22em;
+    border-color: transparent transparent #fff transparent;
+  }
+  .tree__trunk {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 0);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 2em 30em 2em;
+    border-color: transparent transparent #621213 transparent;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: -19em;
+      transform: translate(152%, -49%) rotate(50deg);
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 1em 10em 1em;
+      border-color: transparent transparent #621213 transparent;
+
+    }
+  }
+}

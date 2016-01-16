@@ -1,0 +1,50 @@
+.weather {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+#weather-background {
+  z-index: 0;
+}
+#weather-foreground {
+  z-index: 2;
+}
+.weather__snow {
+  background: #F0FAF6;
+  display: block;
+  position: absolute;
+  top:-5em;
+  animation:snow 5s infinite ease-in;
+
+}
+.weather__snow--style-1 {
+  width: 4.5em;
+  height: 4em;
+  border-radius: 50%;
+}
+.weather__snow--style-2 {
+  width: 3em;
+  height: 3em;
+  border-radius: 1em;
+}
+.weather__snow--style-3 {
+  width: 4em;
+  height: 3.5em;
+  border-radius: 50% 25% 35% 50%;
+}
+.weather__snow--style-4 {
+  width: 3em;
+  height: 3em;
+  background: none;
+  &::after {
+    background: #F0FAF6;
+    content: "";
+    display: block;
+    width: 3em;
+    height: 3em;
+    border-radius: 35% 45% 47% 50%;
+    transform: rotate(45deg);
+  }
+}
