@@ -1,23 +1,34 @@
 (function(){
 
+
 var $body = document.body;
 var $weatherForeground = document.getElementById("weather-foreground");
 var $weatherBackground = document.getElementById("weather-background");
 var $snowAnimation = document.getElementById("snow-animation");
 var $scene = document.getElementById("scene");
 
+var fullSupport = (function(){
+  var flex = ["flex", "webkitFlex", "msFlex"];
 
+  for (var i = 0, len = flex.length; i < len; i++) {
+    if(flex[i] in $body.style){
+      return true;
+    }
+  }
+  return false;
 
+}());
+
+var windowResizeTimeout;
+var windowResizeTimeout2;
 var fontSize = parseFloat(window.getComputedStyle($body).fontSize.replace("px", ""));
-var windowHeightEM = window.innerHeight / fontSize;
-var windowWidthEM = window.innerWidth / fontSize;
 var sceneWidthEM = 335;
 var sceneHeightEM = $scene.offsetHeight / fontSize;
 var animtionTemplate = $snowAnimation.innerHTML;
 var $style = document.createElement("STYLE");
 var animation = animtionTemplate.replace(/PLACEHOLDER/g, sceneHeightEM + "em");
-$style.innerHTML = animation;
-$body.appendChild($style);
+var $error;
+
 
 
 var backgroundHTML = "";
@@ -52,14 +63,37 @@ backgroundHTML = htmlArray.join("");
 
 
 
-
+$style.innerHTML = animation;
+$body.appendChild($style);
 $weatherForeground.innerHTML = foregroundHTML;
 $weatherBackground.innerHTML = backgroundHTML;
 
+if(!fullSupport){
+  $error = document.createElement("DIV");
+  $error.id = "error";
+  $error.innerHTML = "Your browser may not support all the features to display this page properly. Please use a more up to date browser."
+  $body.appendChild($error);
+}
+
+function windowResize() {
+  clearTimeout(windowResizeTimeout);
+  clearTimeout(windowResizeTimeout2);
+  windowResizeTimeout = setTimeout(function(){
+    var newFontSize = parseFloat(window.getComputedStyle($body).fontSize.replace("px", ""));
+    if(newFontSize != fontSize){
+      fontSize = newFontSize;
+      $body.classList.add("refreshAnimation");
+      windowResizeTimeout2 = setTimeout(function () {
+        $body.classList.remove("refreshAnimation");
+      }, 50);
+    }
+  },100);
 
 
+}
 
 
+window.addEventListener("resize", windowResize);
 
 
 }());
